@@ -4,6 +4,7 @@ go 1.21.0
 
 require (
 	github.com/gin-gonic/gin v1.10.0
+	github.com/wechatpay-apiv3/wechatpay-go v0.2.20
 	github.com/xuri/excelize/v2 v2.9.0
 )
 
