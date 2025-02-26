@@ -79,6 +79,13 @@
         .button:hover {
             background-color: #45a049;
         }
+        .info {
+            color: #2196F3;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #E3F2FD;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +127,7 @@
                     <input type="file" name="file" accept=".xlsx,.xls" required>
                 </div>
                 
-                <button type="submit" class="button">上传并解析</button>
+                <button type="submit" class="button">开始转账</button>
             </form>
             
             <div id="result"></div>
@@ -136,13 +143,22 @@
     </div>
 
     <script>
-        // 上传表单处理
+        // 修改表单提交处理
         document.getElementById('uploadForm').onsubmit = async (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
+            const resultDiv = document.getElementById('result');
             
             try {
-                const response = await fetch('/api/upload', {
+                // 显示处理中状态
+                resultDiv.innerHTML = `
+                    <div class="info">
+                        正在处理转账，请稍候...
+                    </div>
+                `;
+                
+                // 发送转账请求
+                const response = await fetch('/api/transfer/batch', {
                     method: 'POST',
                     body: formData
                 });
@@ -150,22 +166,22 @@
                 const result = await response.json();
                 
                 if (response.ok) {
-                    document.getElementById('result').innerHTML = `
+                    resultDiv.innerHTML = `
                         <div class="success">
                             ${result.message}
                         </div>
                     `;
-                    // 上传成功后刷新记录列表
+                    // 刷新记录列表
                     loadRecordFiles();
                 } else {
-                    document.getElementById('result').innerHTML = `
+                    resultDiv.innerHTML = `
                         <div class="error">
                             错误：${result.error}
                         </div>
                     `;
                 }
             } catch (error) {
-                document.getElementById('result').innerHTML = `
+                resultDiv.innerHTML = `
                     <div class="error">
                         系统错误：${error.message}
                     </div>

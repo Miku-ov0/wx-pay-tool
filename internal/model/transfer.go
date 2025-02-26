@@ -3,14 +3,14 @@ package model
 // TransferRequest 转账请求的配置信息
 type TransferRequest struct {
 	// 商户配置
-	MchID  string `json:"mch_id" binding:"required"`
-	AppID  string `json:"app_id" binding:"required"`
-	APIKey string `json:"api_key" binding:"required"`
+	MchID  string `json:"mchId" binding:"required"`
+	AppID  string `json:"appId" binding:"required"`
+	APIKey string `json:"apiKey" binding:"required"`
 
 	// 转账配置
-	SceneID   string `json:"scene_id" binding:"required"`
+	SceneID   string `json:"sceneId" binding:"required"`
 	Remark    string `json:"remark" binding:"required"`
-	SceneInfo string `json:"scene_info" binding:"required"`
+	SceneInfo string `json:"sceneInfo" binding:"required"`
 }
 
 // TransferRecord Excel中的转账记录

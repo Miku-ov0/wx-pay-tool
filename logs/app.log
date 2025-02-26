@@ -1,8 +1,75 @@
-INFO: 2025/02/26 17:53:10 upload.go:29: 接收到文件上传请求
-INFO: 2025/02/26 17:53:10 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226175310.xlsx
-INFO: 2025/02/26 17:53:10 excel.go:87: 成功解析2条转账记录
-INFO: 2025/02/26 17:53:10 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226175310.json
-INFO: 2025/02/26 17:55:15 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:55:16 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:55:16 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:55:17 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226175310.json
+INFO: 2025/02/26 18:03:36 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 18:03:39 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 18:03:40 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226175732.json
+INFO: 2025/02/26 18:05:27 upload.go:29: 接收到文件上传请求
+INFO: 2025/02/26 18:05:27 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226180527.xlsx
+INFO: 2025/02/26 18:05:27 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:05:27 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226180527.json
+INFO: 2025/02/26 18:05:35 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226180527.json
+INFO: 2025/02/26 18:06:12 upload.go:29: 接收到文件上传请求
+INFO: 2025/02/26 18:06:12 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226180612.xlsx
+INFO: 2025/02/26 18:06:12 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:06:12 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226180612.json
+INFO: 2025/02/26 18:07:10 upload.go:29: 接收到文件上传请求
+INFO: 2025/02/26 18:07:10 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226180710.xlsx
+INFO: 2025/02/26 18:07:10 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:07:10 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226180710.json
+INFO: 2025/02/26 18:08:36 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 18:08:37 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 18:13:29 upload.go:29: 接收到文件上传请求
+INFO: 2025/02/26 18:13:29 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226181329.xlsx
+INFO: 2025/02/26 18:13:29 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:13:29 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:15:47 upload.go:29: 接收到文件上传请求
+INFO: 2025/02/26 18:15:47 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226181547.xlsx
+INFO: 2025/02/26 18:15:47 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:15:47 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:15:53 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:15:54 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:15:55 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:15:59 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:15:59 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:16:00 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:16:07 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:17:39 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:17:40 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:22:10 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:22:10 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182210.xlsx
+INFO: 2025/02/26 18:22:10 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:22:20 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:22:21 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:22:22 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:22:23 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:22:24 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181547.json
+INFO: 2025/02/26 18:22:41 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:22:41 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182241.xlsx
+INFO: 2025/02/26 18:22:41 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:22:54 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:22:54 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182254.xlsx
+INFO: 2025/02/26 18:22:54 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:24:29 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:24:29 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182429.xlsx
+INFO: 2025/02/26 18:24:29 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:25:51 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:25:51 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182551.xlsx
+INFO: 2025/02/26 18:25:51 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:27:57 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:27:57 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182757.xlsx
+INFO: 2025/02/26 18:27:57 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:27:57 transfer.go:27: 开始处理2条转账记录
+INFO: 2025/02/26 18:27:57 wxpay.go:72: 转账请求body: {"appid":"1","out_batch_no":"B20250226182757001","batch_name":"批量转账-B20250226182757001","batch_remark":"123","total_amount":21100,"total_num":1,"transfer_detail_list":[{"out_detail_no":"123","transfer_amount":21100,"openid":"1","user_name":"","remark":"123"}],"transfer_scene":{"scene_id":"1","scene_info":"123"}}
+ERROR: 2025/02/26 18:27:57 transfer.go:67: 转账失败[123]: generate signature failed: failed to parse private key
+INFO: 2025/02/26 18:27:57 wxpay.go:72: 转账请求body: {"appid":"1","out_batch_no":"B20250226182757002","batch_name":"批量转账-B20250226182757002","batch_remark":"123","total_amount":1,"total_num":1,"transfer_detail_list":[{"out_detail_no":"122","transfer_amount":1,"openid":"2","user_name":"","remark":"123"}],"transfer_scene":{"scene_id":"1","scene_info":"123"}}
+ERROR: 2025/02/26 18:27:57 transfer.go:67: 转账失败[122]: generate signature failed: failed to parse private key
+INFO: 2025/02/26 18:27:57 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226182757.json
+INFO: 2025/02/26 18:28:45 transfer.go:84: 接收到批量转账请求
+INFO: 2025/02/26 18:28:45 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226182845.xlsx
+INFO: 2025/02/26 18:28:45 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 18:28:45 transfer.go:27: 开始处理2条转账记录
+INFO: 2025/02/26 18:28:45 wxpay.go:72: 转账请求body: {"appid":"1","out_batch_no":"B20250226182845001","batch_name":"批量转账-B20250226182845001","batch_remark":"123","total_amount":21100,"total_num":1,"transfer_detail_list":[{"out_detail_no":"123","transfer_amount":21100,"openid":"1","user_name":"","remark":"123"}],"transfer_scene":{"scene_id":"1","scene_info":"123"}}
+ERROR: 2025/02/26 18:28:45 transfer.go:67: 转账失败[123]: generate signature failed: failed to parse private key
+INFO: 2025/02/26 18:28:45 wxpay.go:72: 转账请求body: {"appid":"1","out_batch_no":"B20250226182845002","batch_name":"批量转账-B20250226182845002","batch_remark":"123","total_amount":1,"total_num":1,"transfer_detail_list":[{"out_detail_no":"122","transfer_amount":1,"openid":"2","user_name":"","remark":"123"}],"transfer_scene":{"scene_id":"1","scene_info":"123"}}
+ERROR: 2025/02/26 18:28:45 transfer.go:67: 转账失败[122]: generate signature failed: failed to parse private key
+INFO: 2025/02/26 18:28:45 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226182845.json
+INFO: 2025/02/26 18:28:46 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json
+INFO: 2025/02/26 18:31:57 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226181329.json

@@ -1,0 +1,26 @@
+[
+    {
+        "out_batch_no": "123",
+        "open_id": "1",
+        "amount": 211,
+        "transfer_id": "",
+        "scene_id": "",
+        "remark": "",
+        "scene_info": "",
+        "status": "failed",
+        "request_data": "{\"appid\":\"1\",\"out_batch_no\":\"B20250226182845001\",\"batch_name\":\"批量转账-B20250226182845001\",\"batch_remark\":\"123\",\"total_amount\":21100,\"total_num\":1,\"transfer_detail_list\":[{\"out_detail_no\":\"123\",\"transfer_amount\":21100,\"openid\":\"1\",\"user_name\":\"\",\"remark\":\"123\"}],\"transfer_scene\":{\"scene_id\":\"1\",\"scene_info\":\"123\"}}",
+        "response_data": "generate signature failed: failed to parse private key"
+    },
+    {
+        "out_batch_no": "122",
+        "open_id": "2",
+        "amount": 0.01,
+        "transfer_id": "",
+        "scene_id": "",
+        "remark": "",
+        "scene_info": "",
+        "status": "failed",
+        "request_data": "{\"appid\":\"1\",\"out_batch_no\":\"B20250226182845002\",\"batch_name\":\"批量转账-B20250226182845002\",\"batch_remark\":\"123\",\"total_amount\":1,\"total_num\":1,\"transfer_detail_list\":[{\"out_detail_no\":\"122\",\"transfer_amount\":1,\"openid\":\"2\",\"user_name\":\"\",\"remark\":\"123\"}],\"transfer_scene\":{\"scene_id\":\"1\",\"scene_info\":\"123\"}}",
+        "response_data": "generate signature failed: failed to parse private key"
+    }
+]
