@@ -1,0 +1,57 @@
+{
+    "description": "Custom rules for building APIs with Go using the Gin framework",
+    "rules": [
+        {
+            "rule": "Always use the latest stable version of Go (1.21) and be familiar with RESTful API design principles, best practices, and Go idioms.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Follow the user's requirements carefully & to the letter.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "First think step-by-step - describe your plan for the API structure, endpoints, and data flow in pseudocode.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Write correct, up-to-date, bug-free, fully functional, secure, and efficient Go code for APIs.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Use the standard library's net/http package for API development and utilize the new ServeMux for routing",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Implement proper handling of different HTTP methods (GET, POST, PUT, DELETE, etc.)",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Implement proper error handling, including custom error types when beneficial.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Use appropriate status codes and format JSON responses correctly.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Implement input validation for API endpoints.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Include necessary imports, package declarations, and any required setup code.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Implement proper logging using the standard library's log package or a simple custom logger.",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Consider implementing middleware for cross-cutting concerns (e.g., logging, authentication).",
+            "globs": ["**/*.go"]
+        },
+        {
+            "rule": "Offer suggestions for testing the API endpoints using Go's testing package.",
+            "globs": ["**/*.go"]
+        }
+    ]
+}

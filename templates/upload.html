@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>批量转账</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+        }
+        .upload-section, .records-section {
+            flex: 1;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 300px;
+            padding: 5px;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+        .records-list {
+            margin-top: 20px;
+        }
+        .record-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .record-item:hover {
+            background-color: #f5f5f5;
+        }
+        .record-details {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧上传表单 -->
+        <div class="upload-section">
+            <h2>批量转账</h2>
+            <form id="uploadForm">
+                <h3>商户配置</h3>
+                <div class="form-group">
+                    <label>商户号：</label>
+                    <input type="text" name="mchId" required>
+                </div>
+                <div class="form-group">
+                    <label>应用ID：</label>
+                    <input type="text" name="appId" required>
+                </div>
+                <div class="form-group">
+                    <label>API密钥：</label>
+                    <input type="password" name="apiKey" required>
+                </div>
+                
+                <h3>转账配置</h3>
+                <div class="form-group">
+                    <label>转账场景ID：</label>
+                    <input type="text" name="sceneId" required>
+                </div>
+                <div class="form-group">
+                    <label>转账备注：</label>
+                    <input type="text" name="remark" required>
+                </div>
+                <div class="form-group">
+                    <label>场景信息：</label>
+                    <textarea name="sceneInfo" required rows="3"></textarea>
+                </div>
+                
+                <h3>上传转账Excel</h3>
+                <div class="form-group">
+                    <input type="file" name="file" accept=".xlsx,.xls" required>
+                </div>
+                
+                <button type="submit" class="button">上传并解析</button>
+            </form>
+            
+            <div id="result"></div>
+        </div>
+
+        <!-- 右侧记录列表 -->
+        <div class="records-section">
+            <h2>转账记录</h2>
+            <button onclick="loadRecordFiles()" class="button">刷新记录列表</button>
+            <div id="recordsList" class="records-list"></div>
+            <div id="recordDetails" class="record-details"></div>
+        </div>
+    </div>
+
+    <script>
+        // 上传表单处理
+        document.getElementById('uploadForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('result').innerHTML = `
+                        <div class="success">
+                            ${result.message}
+                        </div>
+                    `;
+                    // 上传成功后刷新记录列表
+                    loadRecordFiles();
+                } else {
+                    document.getElementById('result').innerHTML = `
+                        <div class="error">
+                            错误：${result.error}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = `
+                    <div class="error">
+                        系统错误：${error.message}
+                    </div>
+                `;
+            }
+        };
+
+        // 加载记录文件列表
+        async function loadRecordFiles() {
+            try {
+                const response = await fetch('/api/records');
+                const data = await response.json();
+                
+                if (response.ok) {
+                    const recordsList = document.getElementById('recordsList');
+                    recordsList.innerHTML = data.files.map(file => `
+                        <div class="record-item" onclick="loadRecordDetails('${file}')">
+                            ${file}
+                        </div>
+                    `).join('');
+                } else {
+                    throw new Error(data.error);
+                }
+            } catch (error) {
+                document.getElementById('recordsList').innerHTML = `
+                    <div class="error">
+                        加载记录列表失败：${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        // 加载记录详情
+        async function loadRecordDetails(filename) {
+            try {
+                const response = await fetch(`/api/records/${filename}`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    const detailsDiv = document.getElementById('recordDetails');
+                    detailsDiv.style.display = 'block';
+                    
+                    // 创建表格显示记录
+                    let tableHtml = `
+                        <h3>文件：${filename}</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>商户单号</th>
+                                    <th>收款用户OpenID</th>
+                                    <th>转账金额(元)</th>
+                                    <th>转账状态</th>
+                                    <th>转账单号</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    
+                    data.records.forEach(record => {
+                        tableHtml += `
+                            <tr>
+                                <td>${record.out_batch_no}</td>
+                                <td>${record.open_id}</td>
+                                <td>${record.amount}</td>
+                                <td>${record.status || '待处理'}</td>
+                                <td>${record.transfer_id || '-'}</td>
+                            </tr>
+                        `;
+                    });
+                    
+                    tableHtml += `
+                            </tbody>
+                        </table>
+                    `;
+                    
+                    detailsDiv.innerHTML = tableHtml;
+                } else {
+                    throw new Error(data.error);
+                }
+            } catch (error) {
+                document.getElementById('recordDetails').innerHTML = `
+                    <div class="error">
+                        加载记录详情失败：${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        // 页面加载时获取记录列表
+        document.addEventListener('DOMContentLoaded', loadRecordFiles);
+    </script>
+</body>
+</html> 
