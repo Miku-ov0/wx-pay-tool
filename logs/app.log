@@ -1,20 +1,8 @@
-INFO: 2025/02/26 17:17:37 upload.go:29: 接收到文件上传请求
-INFO: 2025/02/26 17:17:37 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226171737.xlsx
-INFO: 2025/02/26 17:17:37 excel.go:87: 成功解析2条转账记录
-INFO: 2025/02/26 17:17:37 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:17:39 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:18:13 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:18:18 upload.go:29: 接收到文件上传请求
-INFO: 2025/02/26 17:18:18 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226171818.xlsx
-INFO: 2025/02/26 17:18:18 excel.go:87: 成功解析2条转账记录
-INFO: 2025/02/26 17:18:18 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226171818.json
-INFO: 2025/02/26 17:18:19 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171818.json
-INFO: 2025/02/26 17:18:19 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:18:20 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171818.json
-INFO: 2025/02/26 17:18:21 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:18:22 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171818.json
-INFO: 2025/02/26 17:18:23 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:19:10 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:19:11 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
-INFO: 2025/02/26 17:19:11 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171818.json
-INFO: 2025/02/26 17:19:12 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 17:53:10 upload.go:29: 接收到文件上传请求
+INFO: 2025/02/26 17:53:10 excel.go:22: 开始解析Excel文件: data\temp\upload_20250226175310.xlsx
+INFO: 2025/02/26 17:53:10 excel.go:87: 成功解析2条转账记录
+INFO: 2025/02/26 17:53:10 storage.go:48: 成功保存2条转账记录到文件: data\trans\trans-20250226175310.json
+INFO: 2025/02/26 17:55:15 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 17:55:16 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 17:55:16 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226171737.json
+INFO: 2025/02/26 17:55:17 storage.go:68: 成功从文件加载2条转账记录: data\trans\trans-20250226175310.json

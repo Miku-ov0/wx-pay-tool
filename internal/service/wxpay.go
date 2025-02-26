@@ -69,6 +69,7 @@ func (s *WxPayService) TransferBatches(req model.TransferBatchesRequest) (*http.
 	if err != nil {
 		return nil, fmt.Errorf("marshal request body failed: %v", err)
 	}
+	utils.InfoLogger.Printf("转账请求body: %s\n", body)
 
 	// 生成随机字符串
 	nonceStr := utils.GenerateNonceStr()
@@ -79,6 +80,7 @@ func (s *WxPayService) TransferBatches(req model.TransferBatchesRequest) (*http.
 	if err != nil {
 		return nil, fmt.Errorf("generate signature failed: %v", err)
 	}
+	utils.InfoLogger.Printf("转账请求签名: %s\n", signature)
 
 	// 构造认证信息
 	token := fmt.Sprintf("WECHATPAY2-SHA256-RSA2048 mchid=\"%s\",nonce_str=\"%s\",signature=\"%s\",timestamp=\"%d\",serial_no=\"%s\"",
@@ -88,9 +90,11 @@ func (s *WxPayService) TransferBatches(req model.TransferBatchesRequest) (*http.
 		timestamp,
 		s.config.SerialNo,
 	)
+	utils.InfoLogger.Printf("转账请求token: %s\n", token)
 
 	// 创建HTTP请求
 	httpReq, err := http.NewRequest(method, url, bytes.NewBuffer(body))
+
 	if err != nil {
 		return nil, fmt.Errorf("create request failed: %v", err)
 	}

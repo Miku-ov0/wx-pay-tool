@@ -1,6 +1,7 @@
 package service
 
 import (
+	"encoding/json"
 	"fmt"
 	"time"
 
@@ -54,8 +55,14 @@ func (s *TransferService) ProcessTransfer(records []model.TransferRecord, config
 			},
 		}
 
+		req, _ := json.Marshal(transferReq)
+		records[i].RequestData = string(req)
+
 		// 调用微信转账接口
 		resp, err := s.wxPayService.TransferBatches(transferReq)
+		respJson, _ := json.Marshal(transferReq)
+		records[i].ResponseData = string(respJson)
+
 		if err != nil {
 			utils.ErrorLogger.Printf("转账失败[%s]: %v", records[i].OutBatchNo, err)
 			records[i].Status = "failed"
